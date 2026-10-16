@@ -1,0 +1,6 @@
+project_id = "REPLACE_WITH_GCP_PROJECT_ID"
+github_repository = "OWNER/REPOSITORY"
+notification_email = "oncall@example.com"
+environment = "dev"
+node_count = 1
+deletion_protection = false

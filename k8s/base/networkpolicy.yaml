@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: api-default-deny-ingress, namespace: healthcloud}
+spec:
+  podSelector: {matchLabels: {app: healthcloud-api}}
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - podSelector: {matchLabels: {access-healthcloud-api: "true"}}
+      ports: [{protocol: TCP, port: 8080}]

@@ -1,0 +1,1 @@
+terraform { backend "gcs" { bucket = "REPLACE_TFSTATE_BUCKET"; prefix = "healthcloud/staging" } }

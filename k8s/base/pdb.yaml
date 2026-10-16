@@ -1,0 +1,9 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: healthcloud-api
+  namespace: healthcloud
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels: {app: healthcloud-api}

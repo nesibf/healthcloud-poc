@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: dr-synthetic}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: dr-synthetic}}
+  template:
+    metadata: {labels: {app: dr-synthetic}}
+    spec:
+      containers:
+        - name: synthetic
+          image: registry.k8s.io/pause:3.10
+          resources: {requests: {cpu: 10m, memory: 16Mi}, limits: {cpu: 50m, memory: 32Mi}}
