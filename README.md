@@ -6,7 +6,7 @@
 
 GCP / GKE / Terraform modules / GitHub OIDC / GitHub Actions / Argo CD GitOps / Monitoring / DR readiness.
 
-See [Production v2 architecture, bootstrap and limitations](docs/PRODUCTION_V2.md).
+See [Production architecture, bootstrap and limitations](docs/PRODUCTION.md).
 
 ## Directories
 - `api/`: FastAPI app, health checks, metrics, unit tests, non-root image
