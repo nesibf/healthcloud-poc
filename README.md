@@ -1,4 +1,6 @@
-# HealthCloud Platform — Production v2 (reference scaffold)
+# HealthCloud Platform — Production
+
+
 
 **Demo only. No real patient data. No production security or availability guarantee.**
 
