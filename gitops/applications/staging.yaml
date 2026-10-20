@@ -1,12 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-metadata: {name: healthcloud-staging, namespace: argocd}
+metadata: { name: healthcloud-staging, namespace: argocd }
 spec:
   project: default
   source:
-    repoURL: https://github.com/REPLACE_OWNER/REPLACE_REPO.git
+    repoURL: https://github.com/nesibf/healthcloud-poc.git
     targetRevision: main
     path: k8s/overlays/staging
-  destination: {server: https://kubernetes.default.svc, namespace: healthcloud}
+  destination:
+    { server: https://kubernetes.default.svc, namespace: healthcloud }
   syncPolicy:
     syncOptions: [CreateNamespace=true]
